@@ -1,6 +1,5 @@
 <template lang="pug">
   div#app
-    h1 sample
     .box
       .comment ほげ
 </template>
@@ -38,10 +37,10 @@ export default {
     }
 
     @keyframes comments {
-      from{
+      from {
         transform: translate(110%, 0);
       }
-      to{
+      to {
         transform: translate(-100%, 0);
       }
     }
