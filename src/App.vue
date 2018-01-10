@@ -1,6 +1,5 @@
 <template lang="pug">
   div#app
-    h1 sample
     .box
       .comment ほげ
 </template>
