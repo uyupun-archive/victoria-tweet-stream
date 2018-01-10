@@ -37,10 +37,10 @@ export default {
     }
 
     @keyframes comments {
-      from{
+      from {
         transform: translate(110%, 0);
       }
-      to{
+      to {
         transform: translate(-100%, 0);
       }
     }
