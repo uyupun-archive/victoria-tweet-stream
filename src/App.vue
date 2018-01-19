@@ -1,8 +1,8 @@
 <template lang="pug">
-  div#app
-    h1 sample
+  #app
     .box
-      .comment ほげ
+      .comment ほげほげほげほげほげほげ
+      .comment ほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげ
 </template>
 
 <script>
@@ -22,28 +22,31 @@ export default {
   }
 
   .box {
-    .comment {
-      font-size: 150%;
-      color: white;
-      text-shadow:
-          black 0.5px 0.5px 0, black -0.5px -0.5px 0,/*右下、左上*/
-          black -0.5px 0.5px 0, black 0.5px -0.5px 0,/*右上、左下*/
-          black 0px 0.5px 0, black  -0.5px 0,/*右、左*/
-          black -0.5px 0 0, black 0.5px 0 0;/*上、下*/
-      animation-name: comments;
-      animation-duration: 10s;
-      animation-timing-function: linear;
-      animation-iteration-count: 1;
-      animation-fill-mode: both;
-    }
-
-    @keyframes comments {
-      from{
-        transform: translate(110%, 0);
+    position: relative;
+      .comment {
+        position: absolute;
+        right: 0;
+        font-size: 32px;
+        white-space: nowrap;
+        color: white;
+        text-shadow:
+          black 0.7px 0.7px 0, black -0.7px -0.7px 0,/*右下、左上*/
+          black -0.7px 0.7px 0, black 0.7px -0.7px 0,/*右上、左下*/
+          black 0 0.7px 0, black  -0.7px 0,/*右、左*/
+          black -0.7px 0 0, black 0.7px 0 0;/*上、下*/
+        animation-name: comments;
+        animation-duration: 25s;
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+        animation-timing-function: linear;
       }
-      to{
-        transform: translate(-100%, 0);
+      @keyframes comments {
+        from{
+          transform: translate(101%, 0);
+        }
+        to{
+          transform: translate(-4500px, 0);
+        }
       }
-    }
   }
 </style>
