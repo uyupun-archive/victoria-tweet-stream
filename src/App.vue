@@ -1,23 +1,30 @@
-<template lang="pug">
-  #app
-    .box
-      .comment#comment0 ほげほげほげほげほげほげ
-      .comment#comment1 ほげほげほげほげほげほげ
-      .comment#comment2 ほげほげほげほげほげほげ
-      .comment#comment3 ほげほげほげほげほげほげ
-      .comment#comment4 ほげほげほげほげほげほげ
-      .comment#comment5 ほげほげほげほげほげほげ
-      .comment#comment6 ほげほげほげほげほげほげ
-      .comment#comment7 ほげほげほげほげほげほげ
-      .comment#comment8 ほげほげほげほげほげほげ
-      .comment#comment9 ほげほげほげほげほげほげ
-      .comment#comment10 ほげほげほげほげほげほげ
-      .comment#comment11 ほげほげほげほげほげほげ
+<template>
+  <div id="app">
+    <div class="box">
+      <div id="comment0" class="comment">ほげほげほげほげほげほげ</div>
+      <div id="comment1" class="comment">ほげほげほげほげほげほげ</div>
+      <div id="comment2" class="comment">ほげほげほげほげほげほげ</div>
+      <div id="comment3" class="comment">ほげほげほげほげほげほげ</div>
+      <div id="comment4" class="comment">ほげほげほげほげほげほげ</div>
+      <div id="comment5" class="comment">ほげほげほげほげほげほげ</div>
+      <div id="comment6" class="comment">ほげほげほげほげほげほげ</div>
+      <div id="comment7" class="comment">ほげほげほげほげほげほげ</div>
+      <div id="comment8" class="comment">ほげほげほげほげほげほげ</div>
+      <div id="comment9" class="comment">ほげほげほげほげほげほげ</div>
+      <div id="comment10" class="comment">ほげほげほげほげほげほげ</div>
+      <div id="comment11" class="comment">ほげほげほげほげほげほげ</div>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
   name: 'app',
+  data() {
+    return {
+
+    }
+  }
 }
 </script>
 
@@ -90,5 +97,35 @@ export default {
     #comment11 {
       animation-delay: 2s;
     }
+  }
+  .white {
+    color: #fff;
+  }
+  .red {
+    color: #ea3423;
+  }
+  .pink {
+    color: #ef8784;
+  }
+  .orange {
+    color: #f6c243;
+  }
+  .yellow {
+    color: #fefe54;
+  }
+  .green {
+    color: #75fb4c;
+  }
+  .light-blue {
+    color: #75fbfd;
+  }
+  .blue {
+    color: #1c00f5;
+  }
+  .purple {
+    color: #b024f6;
+  }
+  .black {
+    color: #000;
   }
 </style>
