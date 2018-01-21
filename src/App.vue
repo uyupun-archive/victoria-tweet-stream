@@ -72,6 +72,7 @@ export default {
     }
   },
   created() {
+    this.changeColor()
     setInterval(() => {
       this.changeColor()
     }, 25000)
