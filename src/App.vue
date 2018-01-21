@@ -1,8 +1,18 @@
 <template lang="pug">
   #app
     .box
+      .comment#comment0 ほげほげほげほげほげほげ
       .comment#comment1 ほげほげほげほげほげほげ
-      .comment#comment2 ほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげ
+      .comment#comment2 ほげほげほげほげほげほげ
+      .comment#comment3 ほげほげほげほげほげほげ
+      .comment#comment4 ほげほげほげほげほげほげ
+      .comment#comment5 ほげほげほげほげほげほげ
+      .comment#comment6 ほげほげほげほげほげほげ
+      .comment#comment7 ほげほげほげほげほげほげ
+      .comment#comment8 ほげほげほげほげほげほげ
+      .comment#comment9 ほげほげほげほげほげほげ
+      .comment#comment10 ほげほげほげほげほげほげ
+      .comment#comment11 ほげほげほげほげほげほげ
 </template>
 
 <script>
@@ -47,6 +57,47 @@ export default {
       to {
         transform: translate(-4500px, 0);
       }
+    }
+    @for $i from 0 through 11 {
+      #comment#{$i} {
+        top: $i * 50px;
+      }
+    }
+    #comment0 {
+      animation-delay: 3s;
+    }
+    #comment1 {
+      animation-delay: 7s;
+    }
+    #comment2 {
+      animation-delay: 2s;
+    }
+    #comment3 {
+      animation-delay: 5s;
+    }
+    #comment4 {
+      animation-delay: 4s;
+    }
+    #comment5 {
+      animation-delay: 9s;
+    }
+    #comment6 {
+      animation-delay: 1s;
+    }
+    #comment7 {
+      animation-delay: 6s;
+    }
+    #comment8 {
+      animation-delay: 3s;
+    }
+    #comment9 {
+      animation-delay: 5s;
+    }
+    #comment10 {
+      animation-delay: 7s;
+    }
+    #comment11 {
+      animation-delay: 2s;
     }
   }
 </style>
