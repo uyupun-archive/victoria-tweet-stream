@@ -14,6 +14,10 @@
       <div id="comment9" class="comment" v-bind:class="target[9]">ほげほげほげほげほげほげ</div>
       <div id="comment10" class="comment" v-bind:class="target[10]">ほげほげほげほげほげほげ</div>
       <div id="comment11" class="comment" v-bind:class="target[11]">ほげほげほげほげほげほげ</div>
+      <div id="comment12" class="comment" v-bind:class="target[12]">ほげほげほげほげほげほげ</div>
+      <div id="comment13" class="comment" v-bind:class="target[13]">ほげほげほげほげほげほげ</div>
+      <div id="comment14" class="comment" v-bind:class="target[14]">ほげほげほげほげほげほげ</div>
+      <div id="comment15" class="comment" v-bind:class="target[15]">ほげほげほげほげほげほげ</div>
     </div>
   </div>
 </template>
@@ -25,6 +29,10 @@ export default {
     return {
       className: 'white',
       target: [
+        'white',
+        'white',
+        'white',
+        'white',
         'white',
         'white',
         'white',
@@ -56,7 +64,7 @@ export default {
     changeColor() {
       let colorNum = Math.floor(Math.random() * 10)
       this.className = this.color[colorNum]
-      for (let i = 0; i < 11; i++) {
+      for (let i = 0; i <= 15; i++) {
         colorNum = Math.floor(Math.random() * 10)
         this.target[i] = this.color[colorNum]
         console.log(this.target[i])
@@ -66,7 +74,7 @@ export default {
   created() {
     setInterval(() => {
       this.changeColor()
-    }, 3000)
+    }, 25000)
   }
 }
 </script>
@@ -98,7 +106,7 @@ export default {
         transform: translate(-4500px, 0);
       }
     }
-    @for $i from 0 through 11 {
+    @for $i from 0 through 15 {
       #comment#{$i} {
         top: $i * 50px;
       }
@@ -137,6 +145,21 @@ export default {
       animation-delay: 7s;
     }
     #comment11 {
+      animation-delay: 2s;
+    }
+    #comment11 {
+      animation-delay: 2s;
+    }
+    #comment12 {
+      animation-delay: 2s;
+    }
+    #comment13 {
+      animation-delay: 2s;
+    }
+    #comment14 {
+      animation-delay: 2s;
+    }
+    #comment15 {
       animation-delay: 2s;
     }
   }
