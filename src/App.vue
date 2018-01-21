@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="box">
-      <div v-bind:class="className">hoge</div>
+      <div v-bind:class="className"></div>
       <div id="comment0" class="comment" v-bind:class="target[0]">ほげほげほげほげほげほげ</div>
       <div id="comment1" class="comment" v-bind:class="target[1]">ほげほげほげほげほげほげ</div>
       <div id="comment2" class="comment" v-bind:class="target[2]">ほげほげほげほげほげほげ</div>
