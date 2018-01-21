@@ -41,10 +41,10 @@ export default {
         animation-timing-function: linear;
       }
       @keyframes comments {
-        from{
+        from {
           transform: translate(101%, 0);
         }
-        to{
+        to {
           transform: translate(-4500px, 0);
         }
       }
