@@ -1,18 +1,18 @@
 <template>
   <div id="app">
     <div class="box">
-      <div id="comment0" class="comment">ほげほげほげほげほげほげ</div>
-      <div id="comment1" class="comment">ほげほげほげほげほげほげ</div>
-      <div id="comment2" class="comment">ほげほげほげほげほげほげ</div>
-      <div id="comment3" class="comment">ほげほげほげほげほげほげ</div>
-      <div id="comment4" class="comment">ほげほげほげほげほげほげ</div>
-      <div id="comment5" class="comment">ほげほげほげほげほげほげ</div>
-      <div id="comment6" class="comment">ほげほげほげほげほげほげ</div>
-      <div id="comment7" class="comment">ほげほげほげほげほげほげ</div>
-      <div id="comment8" class="comment">ほげほげほげほげほげほげ</div>
-      <div id="comment9" class="comment">ほげほげほげほげほげほげ</div>
-      <div id="comment10" class="comment">ほげほげほげほげほげほげ</div>
-      <div id="comment11" class="comment">ほげほげほげほげほげほげ</div>
+      <div id="comment0" class="comment" v-bind:class="className">ほげほげほげほげほげほげ</div>
+      <div id="comment1" class="comment" v-bind:class="target[1]">ほげほげほげほげほげほげ</div>
+      <div id="comment2" class="comment" v-bind:class="target[2]">ほげほげほげほげほげほげ</div>
+      <div id="comment3" class="comment" v-bind:class="target[3]">ほげほげほげほげほげほげ</div>
+      <div id="comment4" class="comment" v-bind:class="target[4]">ほげほげほげほげほげほげ</div>
+      <div id="comment5" class="comment" v-bind:class="target[5]">ほげほげほげほげほげほげ</div>
+      <div id="comment6" class="comment" v-bind:class="target[6]">ほげほげほげほげほげほげ</div>
+      <div id="comment7" class="comment" v-bind:class="target[7]">ほげほげほげほげほげほげ</div>
+      <div id="comment8" class="comment" v-bind:class="target[8]">ほげほげほげほげほげほげ</div>
+      <div id="comment9" class="comment" v-bind:class="target[9]">ほげほげほげほげほげほげ</div>
+      <div id="comment10" class="comment" v-bind:class="target[10]">ほげほげほげほげほげほげ</div>
+      <div id="comment11" class="comment" v-bind:class="target[11]">ほげほげほげほげほげほげ</div>
     </div>
   </div>
 </template>
@@ -22,8 +22,50 @@ export default {
   name: 'app',
   data() {
     return {
-
+      className: 'white',
+      target: [
+        'white',
+        'white',
+        'white',
+        'white',
+        'white',
+        'white',
+        'white',
+        'white',
+        'white',
+        'white',
+        'white',
+        'white'
+      ],
+      color: [
+        'white',
+        'red',
+        'pink',
+        'orange',
+        'yellow',
+        'green',
+        'light-blue',
+        'blue',
+        'purple',
+        'black'
+      ]
     }
+  },
+  methods: {
+    changeColor() {
+      let colorNum = Math.floor(Math.random() * 10)
+      this.className = this.color[colorNum]
+//      for (let i = 0; i < 12; i++) {
+//        let colorNum = Math.floor(Math.random() * 10)
+//        this.target[i] = this.color[colorNum]
+//      }
+//      console.log(this.target)
+    }
+  },
+  created() {
+    setInterval(() => {
+      this.changeColor()
+    }, 3000)
   }
 }
 </script>
@@ -36,7 +78,6 @@ export default {
       right: 0;
       font-size: 32px;
       white-space: nowrap;
-      color: white;
       text-shadow:
         black 0.7px 0.7px 0, black -0.7px -0.7px 0,/*右下、左上*/
         black -0.7px 0.7px 0, black 0.7px -0.7px 0,/*右上、左下*/
