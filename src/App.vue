@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <div class="box">
-      <div id="comment0" class="comment" v-bind:class="className">ほげほげほげほげほげほげ</div>
+      <div v-bind:class="className">hoge</div>
+      <div id="comment0" class="comment" v-bind:class="target[0]">ほげほげほげほげほげほげ</div>
       <div id="comment1" class="comment" v-bind:class="target[1]">ほげほげほげほげほげほげ</div>
       <div id="comment2" class="comment" v-bind:class="target[2]">ほげほげほげほげほげほげ</div>
       <div id="comment3" class="comment" v-bind:class="target[3]">ほげほげほげほげほげほげ</div>
@@ -55,11 +56,11 @@ export default {
     changeColor() {
       let colorNum = Math.floor(Math.random() * 10)
       this.className = this.color[colorNum]
-//      for (let i = 0; i < 12; i++) {
-//        let colorNum = Math.floor(Math.random() * 10)
-//        this.target[i] = this.color[colorNum]
-//      }
-//      console.log(this.target)
+      for (let i = 0; i < 11; i++) {
+        colorNum = Math.floor(Math.random() * 10)
+        this.target[i] = this.color[colorNum]
+        console.log(this.target[i])
+      }
     }
   },
   created() {
