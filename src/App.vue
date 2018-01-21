@@ -27,10 +27,6 @@ export default {
 </script>
 
 <style lang="scss">
-  h1 {
-    color: red;
-  }
-
   .box {
     position: relative;
     .comment {
