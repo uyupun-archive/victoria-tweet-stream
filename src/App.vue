@@ -90,17 +90,7 @@ export default {
         'delay12',
         'delay13',
         'delay14',
-        'delay15',
-        'delay16',
-        'delay17',
-        'delay18',
-        'delay19',
-        'delay20',
-        'delay21',
-        'delay22',
-        'delay23',
-        'delay24',
-        'delay25',
+        'delay15'
       ]
     }
   },
@@ -218,36 +208,6 @@ export default {
   .delay15 {
     animation-delay: 15s;
   }
-  /*.delay16 {*/
-    /*animation-delay: 16s;*/
-  /*}*/
-  /*.delay17 {*/
-    /*animation-delay: 17s;*/
-  /*}*/
-  /*.delay18 {*/
-    /*animation-delay: 18s;*/
-  /*}*/
-  /*.delay19 {*/
-    /*animation-delay: 19s;*/
-  /*}*/
-  /*.delay20 {*/
-    /*animation-delay: 20s;*/
-  /*}*/
-  /*.delay21 {*/
-    /*animation-delay: 21s;*/
-  /*}*/
-  /*.delay22 {*/
-    /*animation-delay: 22s;*/
-  /*}*/
-  /*.delay23 {*/
-    /*animation-delay: 23s;*/
-  /*}*/
-  /*.delay24 {*/
-    /*animation-delay: 24s;*/
-  /*}*/
-  /*.delay25 {*/
-    /*animation-delay: 25s;*/
-  /*}*/
   .white {
     color: #fff;
   }
