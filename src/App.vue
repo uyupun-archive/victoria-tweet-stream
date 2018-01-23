@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <div class="box">
-      <div v-bind:class="className"></div>
       <div id="comment0" class="comment" v-bind:class="[ color[0], delay[0] ]">ほげほげほげほげほげほげ</div>
       <div id="comment1" class="comment" v-bind:class="[ color[1], delay[1] ]">ほげほげほげほげほげほげ</div>
       <div id="comment2" class="comment" v-bind:class="[ color[2], delay[2] ]">ほげほげほげほげほげほげ</div>
@@ -27,7 +26,6 @@ export default {
   name: 'app',
   data() {
     return {
-      className: 'white',
       color: [
         'white',
         'white',
@@ -92,17 +90,7 @@ export default {
         'delay12',
         'delay13',
         'delay14',
-        'delay15',
-        'delay16',
-        'delay17',
-        'delay18',
-        'delay19',
-        'delay20',
-        'delay21',
-        'delay22',
-        'delay23',
-        'delay24',
-        'delay25',
+        'delay15'
       ]
     }
   },
@@ -115,11 +103,16 @@ export default {
       }
     },
     changeColor() {
-      let colorNum = Math.floor(Math.random() * 10)
-      this.className = this.colorPalette[colorNum]
       for (let i = 0; i <= 15; i++) {
-        colorNum = Math.floor(Math.random() * 10)
-        this.color[i] = this.colorPalette[colorNum]
+        let rand = Math.random()
+        if (rand < 0.6) {
+          this.color[i] = 'white'
+        } else if (rand < 0.8) {
+          this.color[i] = 'red'
+        } else {
+          let colorNum = Math.floor(Math.random() * 10)
+          this.color[i] = this.colorPalette[colorNum]
+        }
       }
     }
   },
@@ -215,36 +208,6 @@ export default {
   .delay15 {
     animation-delay: 15s;
   }
-  /*.delay16 {*/
-    /*animation-delay: 16s;*/
-  /*}*/
-  /*.delay17 {*/
-    /*animation-delay: 17s;*/
-  /*}*/
-  /*.delay18 {*/
-    /*animation-delay: 18s;*/
-  /*}*/
-  /*.delay19 {*/
-    /*animation-delay: 19s;*/
-  /*}*/
-  /*.delay20 {*/
-    /*animation-delay: 20s;*/
-  /*}*/
-  /*.delay21 {*/
-    /*animation-delay: 21s;*/
-  /*}*/
-  /*.delay22 {*/
-    /*animation-delay: 22s;*/
-  /*}*/
-  /*.delay23 {*/
-    /*animation-delay: 23s;*/
-  /*}*/
-  /*.delay24 {*/
-    /*animation-delay: 24s;*/
-  /*}*/
-  /*.delay25 {*/
-    /*animation-delay: 25s;*/
-  /*}*/
   .white {
     color: #fff;
   }
