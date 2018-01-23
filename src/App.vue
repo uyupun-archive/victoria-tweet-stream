@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <div class="box">
+      <div v-bind:class="className"></div>
       <div id="comment0" class="comment" v-bind:class="[ color[0], delay[0] ]">ほげほげほげほげほげほげ</div>
       <div id="comment1" class="comment" v-bind:class="[ color[1], delay[1] ]">ほげほげほげほげほげほげ</div>
       <div id="comment2" class="comment" v-bind:class="[ color[2], delay[2] ]">ほげほげほげほげほげほげ</div>
@@ -26,6 +27,7 @@ export default {
   name: 'app',
   data() {
     return {
+      className: 'white',
       color: [
         'white',
         'white',
@@ -103,6 +105,8 @@ export default {
       }
     },
     changeColor() {
+      let colorNum = Math.floor(Math.random() * 10)
+      this.className = this.colorPalette[colorNum]
       for (let i = 0; i <= 15; i++) {
         let rand = Math.random()
         if (rand < 0.6) {
