@@ -154,6 +154,10 @@ export default {
 </script>
 
 <style lang="scss">
+  * {
+    margin: 0;
+    padding: 0;
+  }
   .box {
     width: 100%;
     height: 800px;
