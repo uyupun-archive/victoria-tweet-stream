@@ -1,6 +1,9 @@
 <template>
   <div id="app">
-    <video autoplay id="video" class="video"></video>
+    <div class="videoWrapper">
+      <video autoplay id="video" class="video"></video>
+    </div>
+
     <div class="box">
       <div v-bind:class="className"></div>
       <div id="comment0" class="comment" v-bind:class="[ color[0], delay[0] ]">ほげほげほげほげほげほげ</div>
@@ -270,8 +273,16 @@ export default {
   .black {
     color: #000;
   }
+  .videoWrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
   .video {
-    width: 320px;
-    height: 240px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
   }
 </style>
