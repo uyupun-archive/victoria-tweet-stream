@@ -4,6 +4,8 @@
 
 のちに[Victoria](https://github.com/AfterSchoolStudy/victoria)に統合する.
 
+2018/1/25 追記:
+このリポジトリは[Victoria](https://github.com/AfterSchoolStudy/victoria)に統合されました.
 
 # Build & Setup
 
