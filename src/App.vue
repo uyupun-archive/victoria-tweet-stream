@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <video autoplay id="video" class="video"></video>
     <div class="box">
       <div v-bind:class="className"></div>
       <div id="comment0" class="comment" v-bind:class="[ color[0], delay[0] ]">ほげほげほげほげほげほげ</div>
@@ -129,6 +130,22 @@ export default {
       this.changeColor()
       this.changeDelay()
     }, 25000)
+  },
+  mounted() {
+    const video = document.getElementById('video');
+    let localStream;
+
+    navigator.mediaDevices.getUserMedia({
+      video: true,
+      audio: false}
+    )
+    .then(stream => {
+        localStream = stream;
+        video.src = URL.createObjectURL(localStream);
+      })
+    .catch(error => {
+      console.error('Error');
+    });
   }
 }
 </script>
@@ -252,5 +269,9 @@ export default {
   }
   .black {
     color: #000;
+  }
+  .video {
+    width: 320px;
+    height: 240px;
   }
 </style>
