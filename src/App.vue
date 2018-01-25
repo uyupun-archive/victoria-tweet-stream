@@ -1,10 +1,7 @@
 <template>
   <div id="app">
-    <div class="videoWrapper">
-      <video autoplay id="video" class="video"></video>
-    </div>
-
     <div class="box">
+      <video autoplay id="video" class="video"></video>
       <div v-bind:class="className"></div>
       <div id="comment0" class="comment" v-bind:class="[ color[0], delay[0] ]">ほげほげほげほげほげほげ</div>
       <div id="comment1" class="comment" v-bind:class="[ color[1], delay[1] ]">ほげほげほげほげほげほげ</div>
@@ -160,9 +157,17 @@ export default {
   }
   .box {
     width: 100%;
-    height: 800px;
+    height: 100vh;
     overflow: hidden;
     position: relative;
+    .video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+    }
     .comment {
       position: absolute;
       right: 0;
@@ -276,17 +281,5 @@ export default {
   }
   .black {
     color: #000;
-  }
-  .videoWrapper {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-  .video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
   }
 </style>
