@@ -135,6 +135,9 @@ export default {
 
 <style lang="scss">
   .box {
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
     position: relative;
     .comment {
       position: absolute;
