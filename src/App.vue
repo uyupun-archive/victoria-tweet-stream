@@ -1,5 +1,9 @@
 <template>
   <div id="app">
+    <div class="videoWrapper">
+      <video autoplay id="video" class="video"></video>
+    </div>
+
     <div class="box">
       <div v-bind:class="className"></div>
       <div id="comment0" class="comment" v-bind:class="[ color[0], delay[0] ]">ほげほげほげほげほげほげ</div>
@@ -92,15 +96,17 @@ export default {
         'delay12',
         'delay13',
         'delay14',
-        'delay15'
+        'delay15',
+        'delay16',
+        'delay17',
       ]
     }
   },
   methods: {
     changeDelay() {
-      let delayNum = Math.floor(Math.random() * 16)
-      for (let i = 0; i <= 15; i++) {
-        delayNum = Math.floor(Math.random() * 16)
+      let delayNum = Math.floor(Math.random() * 18)
+      for (let i = 0; i <= 17; i++) {
+        delayNum = Math.floor(Math.random() * 18)
         this.delay[i] = this.delayPalette[delayNum]
       }
     },
@@ -127,11 +133,31 @@ export default {
       this.changeColor()
       this.changeDelay()
     }, 25000)
+  },
+  mounted() {
+    const video = document.getElementById('video');
+    let localStream;
+
+    navigator.mediaDevices.getUserMedia({
+      video: true,
+      audio: false}
+    )
+    .then(stream => {
+        localStream = stream;
+        video.src = URL.createObjectURL(localStream);
+      })
+    .catch(error => {
+      console.error('Error');
+    });
   }
 }
 </script>
 
 <style lang="scss">
+  * {
+    margin: 0;
+    padding: 0;
+  }
   .box {
     width: 100%;
     height: 800px;
@@ -215,6 +241,12 @@ export default {
   .delay15 {
     animation-delay: 15s;
   }
+  .delay16 {
+    animation-delay: 15s;
+  }
+  .delay17 {
+    animation-delay: 15s;
+  }
   .white {
     color: #fff;
   }
@@ -244,5 +276,17 @@ export default {
   }
   .black {
     color: #000;
+  }
+  .videoWrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
   }
 </style>
