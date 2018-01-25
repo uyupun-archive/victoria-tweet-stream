@@ -92,15 +92,17 @@ export default {
         'delay12',
         'delay13',
         'delay14',
-        'delay15'
+        'delay15',
+        'delay16',
+        'delay17',
       ]
     }
   },
   methods: {
     changeDelay() {
-      let delayNum = Math.floor(Math.random() * 16)
-      for (let i = 0; i <= 15; i++) {
-        delayNum = Math.floor(Math.random() * 16)
+      let delayNum = Math.floor(Math.random() * 18)
+      for (let i = 0; i <= 17; i++) {
+        delayNum = Math.floor(Math.random() * 18)
         this.delay[i] = this.delayPalette[delayNum]
       }
     },
@@ -210,6 +212,12 @@ export default {
     animation-delay: 14s;
   }
   .delay15 {
+    animation-delay: 15s;
+  }
+  .delay16 {
+    animation-delay: 15s;
+  }
+  .delay17 {
     animation-delay: 15s;
   }
   .white {
